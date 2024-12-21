@@ -1,0 +1,31 @@
+﻿<Window x:Class="MathLearningApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Danh Sách Lớp Học" Height="350" Width="525" WindowStartupLocation="CenterScreen" FontFamily="Segoe UI">
+    <Grid>
+        <!-- Hiển thị tên giáo viên -->
+        <TextBlock Name="TeacherNameTextBlock" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="10"/>
+
+        <!-- DataGrid hiển thị danh sách lớp học -->
+        <DataGrid Name="ClassesDataGrid" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="10,50,10,50"
+                  MouseDoubleClick="ClassesDataGrid_MouseDoubleClick">
+            <DataGrid.ContextMenu>
+                <ContextMenu StaysOpen="True">
+                    <!-- Sửa thông tin lớp -->
+                    <MenuItem Name="EditClass" Header="Sửa Thông Tin Lớp" Click="EditClass_Click"/>
+                    <!-- Xóa lớp -->
+                    <MenuItem Name="DeleteClass" Header="Xóa Lớp" Click="DeleteClass_Click"/>
+                </ContextMenu>
+            </DataGrid.ContextMenu>
+        </DataGrid>
+
+        <!-- Nút Thêm Lớp -->
+        <Button Content="Thêm Lớp" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="10,0,0,10" Height="35" Click="AddClass_Click"/>
+
+        <!-- Nút Sửa Lớp -->
+        <Button Content="Sửa Lớp" VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="10,0,10,10" Height="35" Click="EditClass_Click"/>
+
+        <!-- Nút Xóa Lớp -->
+        <Button Content="Xóa Lớp" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="10,0,10,10" Height="35" Click="DeleteClass_Click"/>
+    </Grid>
+</Window>

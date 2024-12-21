@@ -1,0 +1,10 @@
+﻿<Window x:Class="MathLearningApp.ViewStudentsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Danh Sách Học Sinh" Height="350" Width="525" WindowStartupLocation="CenterScreen" FontFamily="Segoe UI">
+    <Grid>
+        <DataGrid Name="StudentsDataGrid" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="10"/>
+        <Button Content="Thêm Học Sinh" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="10,0,0,10" Height="35" Click="AddStudent_Click"/>
+        <Button Name="ViewAssignmentsButton" Content="Xem Bài Tập" VerticalAlignment="Top" Margin="399,267,10,0" Height="35" Click="ViewAssignmentsButton_Click" RenderTransformOrigin="0.527,0.955"/>
+    </Grid>
+</Window>

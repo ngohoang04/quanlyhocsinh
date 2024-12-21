@@ -1,0 +1,24 @@
+﻿<Window x:Class="MathLearningApp.AddAssignmentWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Tạo Bài Tập Mới" Height="400" Width="400" WindowStartupLocation="CenterScreen" FontFamily="Segoe UI">
+    <Grid Margin="0,0,0,9">
+        <!-- Label và TextBox cho Tiêu Đề -->
+        <Label Content="Tiêu Đề" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,10,0"/>
+
+        <!-- TextBox cho Tiêu Đề với Placeholder -->
+        <TextBox Name="TitleTextBox" Margin="10,30,10,0" VerticalAlignment="Top" Height="30"
+                 GotFocus="TitleTextBox_GotFocus" LostFocus="TitleTextBox_LostFocus"/>
+
+        <!-- Label và TextBox cho Mô Tả -->
+        <Label Content="Mô Tả" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,70,10,0"/>
+        <TextBox Name="DescriptionTextBox" Margin="10,90,10,0" VerticalAlignment="Top" Height="100"/>
+
+        <!-- Label và DatePicker cho Ngày Hết Hạn -->
+        <Label Content="Ngày Hết Hạn" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,200,10,0"/>
+        <DatePicker Name="DueDatePicker" Margin="10,231,10,0" VerticalAlignment="Top"/>
+
+        <!-- Nút Tạo Bài Tập -->
+        <Button Content="Tạo Bài Tập" Margin="10,260,10,10" VerticalAlignment="Bottom" Height="35" Click="AddAssignmentButton_Click"/>
+    </Grid>
+</Window>

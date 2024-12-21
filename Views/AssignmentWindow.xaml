@@ -1,0 +1,25 @@
+﻿<Window x:Class="MathLearningApp.AssignmentWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Quản Lý Bài Tập" Height="400" Width="600"  WindowStartupLocation="CenterScreen" FontFamily="Segoe UI">
+    <Grid>
+        <!-- Tiêu đề -->
+        <TextBlock Text="Danh Sách Bài Tập" FontSize="20" HorizontalAlignment="Center" Margin="10"/>
+
+        <!-- DataGrid hiển thị bài tập của lớp -->
+        <DataGrid Name="AssignmentsDataGrid" Margin="10,50,10,100" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Tiêu Đề" Binding="{Binding Title}" Width="*"/>
+                <DataGridTextColumn Header="Mô Tả" Binding="{Binding Description}" Width="*"/>
+                <DataGridTextColumn Header="Ngày Hết Hạn" Binding="{Binding DueDate}" Width="*"/>
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <!-- Nút Thêm Bài Tập -->
+        <Button Content="Thêm Bài Tập" HorizontalAlignment="Left" Margin="10,300,0,10" VerticalAlignment="Bottom" Height="35" Width="100" Click="AddAssignmentButton_Click"/>
+
+        <!-- Nút Sửa và Xóa -->
+        <Button Content="Sửa Bài Tập" HorizontalAlignment="Left" Margin="120,300,0,10" VerticalAlignment="Bottom" Height="35" Width="100" Click="EditAssignmentButton_Click"/>
+        <Button Content="Xóa Bài Tập" HorizontalAlignment="Right" Margin="0,300,10,10" VerticalAlignment="Bottom" Height="35" Width="100" Click="DeleteAssignmentButton_Click"/>
+    </Grid>
+</Window>

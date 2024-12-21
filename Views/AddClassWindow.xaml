@@ -1,0 +1,14 @@
+﻿<Window x:Class="MathLearningApp.AddClassWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Thêm Lớp" Height="400" Width="400" WindowStartupLocation="CenterScreen" FontFamily="Segoe UI">
+    <Grid>
+        <Label Content="Tên Lớp" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10,10,0,0"/>
+        <TextBox Name="ClassNameTextBox" Margin="10,30,10,0" VerticalAlignment="Top" Height="30"/>
+
+        <Label Content="Mô Tả" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10,70,0,0"/>
+        <TextBox Name="DescriptionTextBox" Margin="10,90,10,0" VerticalAlignment="Top" Height="30"/>
+
+        <Button Content="Thêm Lớp" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="10,0,0,10" Height="35" Click="AddClassButton_Click"/>
+    </Grid>
+</Window>
